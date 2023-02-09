@@ -1,0 +1,91 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-west-2:431591413306:task-definition/task-dogs:2",
+    "containerDefinitions": [
+        {
+            "name": "nodejs-dogs",
+            "image": "431591413306.dkr.ecr.us-west-2.amazonaws.com/fargate-nodejs-app:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "nodejs-dogs-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/task-dogs",
+                    "awslogs-region": "us-west-2",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "family": "task-dogs",
+    "taskRoleArn": "arn:aws:iam::431591413306:role/ecs-Task-Execution-Role",
+    "executionRoleArn": "arn:aws:iam::431591413306:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 2,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-02-08T19:04:45.209Z",
+    "registeredBy": "arn:aws:sts::431591413306:assumed-role/BSP_Admin/joao.silva@bspcloud.com",
+    "tags": [
+        {
+            "key": "update",
+            "value": "1"
+        }
+    ]
+}

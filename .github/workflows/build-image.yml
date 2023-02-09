@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-    - cicd-nodejs/backend**
+    - cicd-nodejs/backend
     # - .github/workflows/**
 
 jobs:

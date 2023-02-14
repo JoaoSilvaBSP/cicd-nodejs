@@ -1,5 +1,8 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-west-2:431591413306:task-definition/task-gateway:1",
+    "family": "task-gateway",
+    "taskRoleArn": "arn:aws:iam::431591413306:role/ecs-Task-Execution-Role",
+    "executionRoleArn": "arn:aws:iam::431591413306:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
     "containerDefinitions": [
         {
             "name": "container-gateway",
@@ -28,14 +31,6 @@
             }
         }
     ],
-    "family": "task-gateway",
-    "taskRoleArn": "arn:aws:iam::431591413306:role/ecs-Task-Execution-Role",
-    "executionRoleArn": "arn:aws:iam::431591413306:role/ecsTaskExecutionRole",
-    "networkMode": "awsvpc",
-    "revision": 1,
-    "volumes": [],
-    "status": "ACTIVE",
-    "placementConstraints": [],
     "compatibilities": [
         "FARGATE"
     ],
@@ -43,9 +38,5 @@
         "FARGATE"
     ],
     "cpu": "512",
-    "memory": "1024",
-    "runtimePlatform": {
-        "cpuArchitecture": "X86_64",
-        "operatingSystemFamily": "LINUX"
-    }
+    "memory": "1024"
 }

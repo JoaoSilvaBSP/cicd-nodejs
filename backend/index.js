@@ -6,7 +6,7 @@ const app = express();
 const port = 80;
 
 const index_page = `
-    <h3>Hello from a Node.js Application running on AWS ECS Fargate</h3>
+    <h3>Hello from a Node.js Application running on AWS ECS Fargate Git Hub ActionsGi</h3>
     <p>What would you like to see ?</p>
     <ul>
         <li>Random dogs ? <a href="/dogs">Click here</a></li>
@@ -28,7 +28,6 @@ app.get('/dogs', async (req, res) => {
         console.log(JSON.stringify(response.data));
 
         const { message: dogImage} = response.data
-
         res.send(`<img src="${dogImage}" alt="random dog" style="max-width: 500px" />`)
     } catch (error) {
         console.log(JSON.stringify(error));

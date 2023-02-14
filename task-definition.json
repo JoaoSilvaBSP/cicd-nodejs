@@ -16,10 +16,6 @@
                 }
             ],
             "essential": true,
-            "environment": [],
-            "environmentFiles": [],
-            "mountPoints": [],
-            "volumesFrom": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -31,12 +27,13 @@
             }
         }
     ],
-    "compatibilities": [
-        "FARGATE"
-    ],
     "requiresCompatibilities": [
         "FARGATE"
     ],
     "cpu": "512",
-    "memory": "1024"
+    "memory": "1024",
+    "runtimePlatform":{
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    }
 }
